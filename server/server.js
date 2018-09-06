@@ -3,9 +3,9 @@ const express = require('express')
 
 const server = express()
 
-const usersRoutes = require('./routes/users')
+// const usersRoutes = require('./routes/users')
 
-server.use('/api/v1/users', usersRoutes)
+// server.use('/api/v1/users', usersRoutes)
 
 server.use(express.json())
 server.use(express.static(path.join(__dirname, './public')))
