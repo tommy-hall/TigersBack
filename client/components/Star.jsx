@@ -19,14 +19,17 @@ class Star extends React.Component {
     const {rating} = this.state
 
     return (
-      <div>
-        <h2>{rating}</h2>
-        <StarRatingComponent
-          name="rate1"
-          starCount={5}
-          value={rating}
-          onStarClick={this.onStarClick.bind(this)}
-        />
+      <div className='star'>
+        <div className='row'>
+          <div className='col-md-9'> </div>
+          <h2>{rating}</h2>
+          <StarRatingComponent
+            name="rate1"
+            starCount={5}
+            value={rating}
+            onStarClick={this.onStarClick.bind(this)}
+          />
+        </div>
       </div>
     )
   }

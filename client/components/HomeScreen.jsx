@@ -35,25 +35,27 @@ export default class HomeScreen extends React.Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="/components/">Components</NavLink>
+                <NavLink href='http://localhost:3000/#/addcourse'>Add Your Course</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
+                <NavLink href="https://www.pgatour.com/">PGA TOUR</NavLink>
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
-                  Options
+                  TIPS
                 </DropdownToggle>
                 <DropdownMenu right>
                   <DropdownItem>
-                    Option 1
+                    Driving
                   </DropdownItem>
                   <DropdownItem>
-                    Option 2
+                    <NavItem>
+                      <NavLink href="https://www.youtube.com/watch?v=DpRmF__A33U">Chipping</NavLink>
+                    </NavItem>
                   </DropdownItem>
                   <DropdownItem divider />
                   <DropdownItem>
-                    Reset
+                    Putting
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
@@ -63,4 +65,4 @@ export default class HomeScreen extends React.Component {
       </div>
     )
   }
-} 
+}

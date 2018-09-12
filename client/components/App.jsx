@@ -8,6 +8,8 @@ import Leaflet from './Leaflet'
 import Search from './Search'
 import Star from './Star'
 import HomeScreen from './HomeScreen'
+import AddReview from './AddReview'
+import AddCourse from './AddCourse'
 
 class App extends React.Component {
   render () {
@@ -17,9 +19,11 @@ class App extends React.Component {
           <div>
             <Route path='/' component={HomeScreen} />
             <Route exact path='/' component={Home} />
+            <Route path='/addcourse' component={AddCourse} />
             <Route path='/courses' component={Leaflet} />
             <Route path='/courses' component={Search} />
             <Route path='/profile' component={Review} />
+            <Route path='/profile' component={AddReview} />
             <Route path='/profile' component={Profile} />
             <Route path='/profile' component={Star} />
           </div>

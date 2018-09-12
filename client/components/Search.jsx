@@ -19,13 +19,36 @@ class Search extends React.Component {
           </select>
         </div>
 
-        <p> Cape Kidnappers </p>
-        <p>1st</p>
+        <div className='thumbnail'>
+          <div className='row'>
+            <div className='col-md-0'> </div>
+            <Link to={'/Profile'} className='thumbnail1' ></Link>
+            <p>1st Cape Kidnappers</p>
 
-        <Link to={'/Profile'} className='banana' ></Link>
+            <div className="w-100"></div>
 
+            <div className='thumbnail'>
+              <div className='row'>
+                <div className='col-md-0'> </div>
+                <Link to={'/Profile'} className='thumbnail1' ></Link>
+                <p>2nd Kauri Cliffs</p>
+
+                <div className="w-100"></div>
+
+                <div className='thumbnail'>
+                  <div className='row'>
+                    <div className='col-md-0'> </div>
+                    <Link to={'/Profile'} className='thumbnail1' ></Link>
+                    <p>3rd Jacks Point</p>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
-
     )
   }
 }

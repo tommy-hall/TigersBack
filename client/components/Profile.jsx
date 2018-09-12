@@ -27,13 +27,15 @@ class Profile extends React.Component {
   render () {
     return (
       <div className='name'>
-        <input value={this.state.search} onChange ={this.handleSubmit}/>
-        <button onClick={this.handleClick}>Submit</button>
-        <h1>{this.state.comments.map(comment =>
-          comment)}
-        </h1>
+        <div className='row'>
+          <div className='col-md-9'> </div>
+          <input value={this.state.search} onChange ={this.handleSubmit}/>
+          <button onClick={this.handleClick}>Submit</button>
+          <h1>{this.state.comments.map(comment =>
+            comment)}
+          </h1>
+        </div>
       </div>
-
     )
   }
 }
