@@ -1,58 +1,39 @@
 import React from 'react'
+import request from 'superagent'
 
 class Profile extends React.Component {
-  constructor () {
-    super()
+  constructor (props) {
+    super(props)
     this.state = {
-      showMenu: false
+      search: '',
+      comments: []
     }
-
-    this.showMenu = this.showMenu.bind(this)
-    this.closeMenu = this.closeMenu.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
+    this.handleClick = this.handleClick.bind(this)
   }
 
-  showMenu (event) {
-    event.preventDefault()
+  handleSubmit (e) {
+    this.setState({
+      search: e.target.value})
+  }
 
-    this.setState({showMenu: true}, () => {
-      document.addEventListener('click', this.closeMenu)
+  handleClick (e) {
+    this.setState({
+      comments: [...this.state.comments, this.state.search],
+      search: ''
     })
-  }
-
-  closeMenu (event) {
-    if (!this.dropdownMenu.contains(event.target)) {
-      this.setState({showMenu: false}, () => {
-        document.removeEventListener('click', this.closeMenu)
-      })
-    }
   }
 
   render () {
     return (
-      <div>
-        <button onClick={this.showMenu}>
-          Show menu
-        </button>
-
-        {
-          this.state.showMenu
-            ? (
-              <div
-                className="menu"
-                ref={(element) => {
-                  this.dropdownMenu = element
-                }}
-              >
-                <button> Menu item 1 </button>
-                <button> Menu item 2 </button>
-                <button> Menu item 3 </button>
-              </div>
-            )
-            : (
-              null
-            )
-        }
+      <div className='name'>
+        <input value={this.state.search} onChange ={this.handleSubmit}/>
+        <button onClick={this.handleClick}>Submit</button>
+        <h1>{this.state.comments.map(comment =>
+          comment)}
+        </h1>
       </div>
+
     )
   }
 }

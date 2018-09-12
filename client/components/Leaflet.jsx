@@ -1,13 +1,13 @@
 import React, {Component} from 'react'
 import {Map, TileLayer, Marker, Popup} from 'react-leaflet'
 
-export default class Map1 extends Component {
+export default class Leaflet extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      lat: 51.505,
-      lng: -0.09,
-      zoom: 13
+      lat: -39.640799,
+      lng: 176.989530,
+      zoom: 8
     }
   }
 

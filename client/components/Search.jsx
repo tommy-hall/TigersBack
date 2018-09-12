@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 class Search extends React.Component {
   render () {
@@ -20,6 +21,8 @@ class Search extends React.Component {
 
         <p> Cape Kidnappers </p>
         <p>1st</p>
+
+        <Link to={'/Profile'} className='banana' ></Link>
 
       </div>
 

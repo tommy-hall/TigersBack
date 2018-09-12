@@ -3,8 +3,11 @@ import {HashRouter as Switch, Route} from 'react-router-dom'
 
 import Home from './Home'
 import Profile from './Profile'
-import Map1 from './Map1'
+import Review from './Review'
+import Leaflet from './Leaflet'
 import Search from './Search'
+import Star from './Star'
+import HomeScreen from './HomeScreen'
 
 class App extends React.Component {
   render () {
@@ -12,10 +15,13 @@ class App extends React.Component {
       <div className='app'>
         <Switch>
           <div>
+            <Route path='/' component={HomeScreen} />
             <Route exact path='/' component={Home} />
-            <Route path='/profile' component={Profile} />
-            <Route path='/courses' component={Map1} />
+            <Route path='/courses' component={Leaflet} />
             <Route path='/courses' component={Search} />
+            <Route path='/profile' component={Review} />
+            <Route path='/profile' component={Profile} />
+            <Route path='/profile' component={Star} />
           </div>
         </Switch>
       </div>
