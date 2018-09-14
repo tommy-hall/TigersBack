@@ -1,7 +1,7 @@
 import React from 'react'
 import {Media} from 'reactstrap'
 
-const Example = () => {
+const Profile = () => {
   return (
     <div className='row'>
       <div className='col-md-0'> </div>
@@ -22,4 +22,4 @@ const Example = () => {
   )
 }
 
-export default Example
+export default Profile

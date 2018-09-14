@@ -5,7 +5,9 @@ const config = require('./knexfile').development
 const conn = knex(config)
 
 module.exports = {
-  getTasks
+  getCourses,
+  getReviews,
+  getCourseByID
 }
 
 function getCourses () {
@@ -16,7 +18,11 @@ function getReviews () {
   return conn('reviews').select()
 }
 
-
+function getCourseByID (id) {
+  return conn('courses')
+    .where(id, 'courses.id')
+    .select()
+}
 
 /* function getBets (testDb) {
   const db = testDb || connection
@@ -41,8 +47,7 @@ function addBets (newbet, testDb) {
       couple: newbet.couple,
       sport: newbet.sport,
       bet: newbet.bet,
-      amount_bet: newbet.amountBet,
+      amount_bet: newbet.amountBet,This
       amount_won: newbet.amountWon,
       percentage: newbet.percentage
     }) */
-}

@@ -7,7 +7,7 @@ export default class Leaflet extends Component {
     this.state = {
       lat: -39.640799,
       lng: 176.989530,
-      zoom: 8
+      zoom: 4
     }
   }
 

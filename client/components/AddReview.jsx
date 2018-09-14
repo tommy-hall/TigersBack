@@ -5,7 +5,9 @@ class AddReview extends React.Component {
     return (
       <div className='row'>
         <div className='col-md-1'> </div>
-        <h1>Add Review</h1>
+        <h1>Reviews</h1>
+        <div className='col-md-7'> </div>
+        <h1>Add A Review</h1>
       </div>
     )
   }

@@ -25,7 +25,7 @@ class Star extends React.Component {
           <h2>{rating}</h2>
           <StarRatingComponent
             name="rate1"
-            starCount={5}
+            starCount={10}
             value={rating}
             onStarClick={this.onStarClick.bind(this)}
           />

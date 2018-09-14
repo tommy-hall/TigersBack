@@ -1,5 +1,4 @@
 import React from 'react'
-import request from 'superagent'
 
 class Profile extends React.Component {
   constructor (props) {

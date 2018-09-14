@@ -1,23 +1,28 @@
 const express = require('express')
+const router = express.Router()
 
 const db = require('./db')
 
-const router = express.Router()
+module.exports = router
 
-router.get('/', (req, res) => {
-  db.getTasks()
-    .then(displayTasks)
-    .catch(displayError)
-
-  function displayTasks (tasks) {
-    res.render('home', {
-      tasks
+router.get('/profile/:id', (req, res) => {
+  const id = req.params.id
+  db.getCourseById(id)
+    .then(course => {
+      res.send(course)
     })
-  }
-
-  function displayError (err) {
-    res.status(500).send(err.message)
-  }
+    .catch(err => {
+      res.status(500).send(err.message)
+    })
 })
 
-module.exports = router
+router.post('/profile', (req, res) => {
+  const newReviews = req.body
+  db.addReviews(newReviews)
+    .then(() => {
+      res.sendStatus(200)
+    })
+    .catch(err => {
+      res.status(500).send('DATABASE ERROR: ' + err.message)
+    })
+})
